@@ -127,5 +127,3 @@ const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT} in ${NODE_ENV} mode`);
   console.log(`Health check available at http://localhost:${PORT}/health`);
 });
-
-console.log("APP")
