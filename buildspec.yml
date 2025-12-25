@@ -13,20 +13,9 @@ phases:
       - echo No build step required for JavaScript projects
       - echo Build completed on `date`
 
-  post_build:
-    commands:
-      - echo Creating deployment package...
-      - mkdir -p deployment
-      - cp -r . deployment/
-      - cd deployment
-      - npm install --production
-      - rm -rf node_modules/.cache
-      - cd ..
-
 artifacts:
   files:
     - '**/*'
-  base-directory: deployment
   discard-paths: no
 
 cache:
